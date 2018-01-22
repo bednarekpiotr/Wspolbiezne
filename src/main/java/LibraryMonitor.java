@@ -1,4 +1,4 @@
-public class LibraryWriterPriority implements Library {
+public class LibraryMonitor implements Library {
 
     private int readers = 0;
     private int writers = 0;

@@ -11,16 +11,16 @@ public class Reader extends Thread {
     }
 
     public void run() {
-        for (int i = 0; i < 2; i++) {
-            System.out.println(getName() + " chce czytać.");
+        for (int i = 1; i <= 2; i++) {
+            System.out.println(getName() + " chce czytać " + i + " raz");
             library.startReading();
             try {
-                System.out.println(getName() + " czyta...");
+                System.out.println(getName() + " czyta "  + i + " raz");
                 Thread.sleep((int) (Math.random() * 1000));
 
             } catch (InterruptedException e) {
             }
-            System.out.println(getName() + " skończył czytać.");
+            System.out.println(getName() + " skończył czytać "  + i + " raz");
             library.endReading();
             try {
                 Thread.sleep((int) (Math.random() * 1000));
